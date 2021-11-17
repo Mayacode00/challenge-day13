@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Color changer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section>
+      <div>
+        <h1>Click to change the color</h1>
+        <button>Change Color</button>
+        <h4>color code</h4>
+      </div>
+    </section>
+  </body>
+  <script>
+    const button = document.querySelector("button");
+    const h4E1 = document.querySelector("h4");
+    const bgE1 = document.querySelector("section");
+
+    button.addEventListener("click", () => {
+      let color = "#";
+      color += Math.random().toString(16).slice(2, 8);
+      bgE1.style.backgroundColor = color;
+      h4E1.innerText = color;
+      console.log(color);
+    });
+  </script>
+</html>
